@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+tensorflow
+keras
+numpy
+pandas
+scikit-learn
+matplotlib
+opencv-python
+psycopg2-binary
+fastapi-users[sqlalchemy2]
