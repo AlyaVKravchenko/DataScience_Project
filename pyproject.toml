@@ -1,25 +1,24 @@
 [tool.poetry]
-name = "Neoro_Titans"
+name = "neural network"
 version = "0.1.0"
-description = "Image clasification"
-authors = ["Neuro Titans"]
+description = ""
+authors = ["dovgo <dovgopolyks@gmail.com>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-django = "^3.2"
-fastapi = "^0.68.0"
-jupyter = ">=1.0.0"
-uvicorn = "^0.15.0"
-djangorestframework = "^3.12.4"
-psycopg2-binary = "^2.9.1"
-pydantic = "^1.8.2"
-tensorflow = "^2.5.0"
-numpy = "^1.21.0"
-pillow = "^8.2.0"
-
-[tool.poetry.dev-dependencies]
+python = "^3.11"
+pydantic = "^2.7.3"
+sqlalchemy = "^2.0.30"
+cloudinary = "^1.40.0"
+pillow = "^10.3.0"
+pydantic-settings = "^2.3.1"
+asyncpg = "^0.29.0"
+pycryptodome = "^3.20.0"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+fastapi-mail = "^1.4.1"
 
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
