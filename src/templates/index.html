@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroTitans project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 100px auto; /* змінено відступи */
+            max-width: 800px; /* обмеження ширини контенту */
+            background-image: url('https://developer-blogs.nvidia.com/wp-content/uploads/2023/08/intro-to-gnns-16x9-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #FFFFFF; /* колір тексту */
+        }
+        h1 {
+            font-size: 3.0em;
+            color: transparent; /* колір заголовку прозорий */
+            background-image: linear-gradient(45deg, #FFC700, #FFD700, #FFEA00, #FFF100); /* переливающийся фон тексту */
+            background-size: 400%;
+            animation: rainbow-text 8s linear infinite; /* анімація тексту */
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        @keyframes rainbow-text {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+        p {
+            font-size: 1.5em;
+            color: #FFFFFF; /* колір тексту */
+        }
+        a {
+            color: #009aff; /* колір посилання */
+            text-decoration: underline; /* підкреслений текст */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome NeuroTitans project!</h1>
+    <p>Welcome to our project, "CIFAR-10 Image Classifier"! This application utilizes a convolutional neural network to accurately classify uploaded images into one of ten predefined categories from the CIFAR-10 dataset. Simply upload an image, and our advanced AI model will instantly identify and label it accordingly.</p>
+    <p>Check out the <a href="http://localhost:8000/docs">Swagger documentation</a> for more information</p>
+</body>
+</html>
