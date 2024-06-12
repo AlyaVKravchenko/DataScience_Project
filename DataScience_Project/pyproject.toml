@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "neural network"
+version = "0.1.0"
+description = ""
+authors = ["dovgo <dovgopolyks@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.7.3"
+sqlalchemy = "^2.0.30"
+cloudinary = "^1.40.0"
+pillow = "^10.3.0"
+pydantic-settings = "^2.3.1"
+asyncpg = "^0.29.0"
+pycryptodome = "^3.20.0"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+fastapi-mail = "^1.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
