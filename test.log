@@ -1,0 +1,105 @@
+2024-06-13 22:56:17,659 Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-06-13 22:56:17,671 Model loaded successfully from cifar10_model.h5
+2024-06-13 22:56:42,882 Predictions: [[1.9561775e-02 1.9673856e-02 3.3428739e-03 1.6183236e-03 4.2683873e-04
+  4.4412827e-04 2.8582938e-02 1.5669428e-02 4.3227978e-02 8.6745185e-01]]
+2024-06-13 22:56:42,882 Predicted class: truck
+2024-06-13 23:01:35,143 Predictions: [[7.8933847e-01 7.4236505e-02 4.7076140e-03 6.1679387e-04 1.2153167e-03
+  1.1033428e-04 3.0306718e-04 1.3892866e-02 9.1496650e-03 1.0642934e-01]]
+2024-06-13 23:01:35,143 Predicted class: airplane
+2024-06-13 23:06:03,871 Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-06-13 23:06:03,882 Model loaded successfully from cifar10_model.h5
+2024-06-13 23:06:19,316 Predictions: [[0.10563443 0.00895813 0.6777637  0.03779591 0.00608134 0.0458561
+  0.03435932 0.07840007 0.001976   0.00317498]]
+2024-06-13 23:06:19,316 Predicted class: bird with probability 0.6777637004852295
+2024-06-13 23:06:33,629 Predictions: [[7.8933847e-01 7.4236505e-02 4.7076140e-03 6.1679387e-04 1.2153167e-03
+  1.1033428e-04 3.0306718e-04 1.3892866e-02 9.1496650e-03 1.0642934e-01]]
+2024-06-13 23:06:33,629 Predicted class: airplane with probability 0.7893384695053101
+2024-06-13 23:06:49,875 Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-06-13 23:06:49,882 Model loaded successfully from cifar10_model.h5
+2024-06-13 23:07:08,266 Predictions: [[0.24587749 0.02270082 0.17827868 0.14313716 0.11957835 0.04535411
+  0.04733096 0.01626542 0.14113197 0.04034499]]
+2024-06-13 23:07:08,266 Predicted class: airplane with probability 0.2458774894475937
+2024-06-13 23:08:18,737 Predictions: [[0.10563443 0.00895813 0.6777637  0.03779591 0.00608134 0.0458561
+  0.03435932 0.07840007 0.001976   0.00317498]]
+2024-06-13 23:08:18,737 Predicted class: bird with probability 0.6777637004852295
+2024-06-13 23:10:12,759 Predictions: [[0.81372494 0.01194944 0.03257708 0.01645651 0.01764863 0.00367055
+  0.00437823 0.00082141 0.08229367 0.0164795 ]]
+2024-06-13 23:10:12,759 Predicted class: airplane with probability 0.813724935054779
+2024-06-13 23:16:07,918 Predictions: [[0.00509866 0.00588477 0.0032253  0.02608156 0.00148032 0.00164048
+  0.26181114 0.00376137 0.00132235 0.6896941 ]]
+2024-06-13 23:16:07,918 Predicted class: truck with probability 0.6896941065788269
+2024-06-14 15:31:25,369 Predictions: [[0.01312985 0.00169817 0.01056651 0.00319564 0.00316121 0.00178329
+  0.00102976 0.07940301 0.00220309 0.8838294 ]]
+2024-06-14 15:31:25,369 Predicted class: truck with probability 0.8838294148445129
+2024-06-14 15:31:41,254 Predictions: [[5.4180789e-01 4.1415668e-01 1.0213711e-03 1.3206556e-04 2.7593329e-05
+  5.9951417e-06 1.4825259e-05 6.5551526e-06 3.2077935e-02 1.0749108e-02]]
+2024-06-14 15:31:41,254 Predicted class: airplane with probability 0.5418078899383545
+2024-06-14 15:32:06,188 Predictions: [[0.03019368 0.04432742 0.04124058 0.01118715 0.00252792 0.00956164
+  0.00118938 0.0396941  0.23624273 0.5838354 ]]
+2024-06-14 15:32:06,188 Predicted class: truck with probability 0.5838354229927063
+2024-06-14 15:32:26,780 Predictions: [[6.9792662e-03 3.6111844e-01 6.6265650e-04 3.8905374e-03 3.2214589e-06
+  6.9008600e-03 3.4316981e-03 8.8532674e-05 5.9154525e-04 6.1633319e-01]]
+2024-06-14 15:32:26,781 Predicted class: truck with probability 0.6163331866264343
+2024-06-14 15:32:37,541 Predictions: [[2.1664154e-02 2.7863410e-01 2.8611340e-03 7.1425585e-04 8.1500679e-05
+  2.2878956e-04 2.1187168e-05 9.0056921e-05 6.9401683e-03 6.8876469e-01]]
+2024-06-14 15:32:37,541 Predicted class: truck with probability 0.6887646913528442
+2024-06-14 15:33:01,119 Predictions: [[3.48657672e-03 1.08963513e-06 7.34342802e-06 1.75024049e-08
+  7.04564442e-08 3.70022235e-07 2.56993538e-10 9.96504307e-01
+  1.69095060e-07 1.12114414e-07]]
+2024-06-14 15:33:01,120 Predicted class: horse with probability 0.9965043067932129
+2024-06-14 15:42:35,267 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2024-06-14 15:42:36,056 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-06-14 15:42:36,149 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2024-06-14 15:42:38,323 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+2024-06-14 18:00:11,512 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2024-06-14 18:00:12,350 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-06-14 18:00:12,465 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2024-06-14 18:00:14,733 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+2024-06-14 18:15:23,158 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2024-06-14 18:16:03,060 From C:\Users\user_win10_e5_13\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2024-06-14 18:21:54,369 Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-06-14 18:21:54,377 Model loaded successfully from cifar10_model.h5
+2024-06-14 18:49:04,972 Predictions: [[1.01784244e-01 6.54905677e-01 3.80405845e-06 9.72405473e-07
+  3.82005595e-07 1.08225834e-07 3.45234616e-06 7.92098872e-05
+  2.05165908e-01 3.80563028e-02]]
+2024-06-14 18:49:04,972 Predicted class: automobile with probability 0.6549056768417358
+2024-06-14 21:13:33,961 Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-06-14 21:13:33,967 Model loaded successfully from cifar10_model.h5
+2024-06-14 22:17:50,643 From C:\QA\GoIT\DataScience_Project\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2024-06-14 22:17:51,331 From C:\QA\GoIT\DataScience_Project\venv\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2024-06-14 22:17:51,493 From C:\QA\GoIT\DataScience_Project\venv\Lib\site-packages\keras\src\layers\pooling\max_pooling2d.py:161: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+2024-06-14 22:17:56,673 Model loaded successfully from ResNet50_model.h5
+2024-06-14 22:18:13,942 Predictions: [[0.03789973 0.01372832 0.4380604  0.19083096 0.04838604 0.02787196
+  0.12546755 0.08268204 0.02244737 0.01262569]]
+2024-06-14 22:18:13,942 Predicted class: bird with probability 0.4380604028701782
+2024-06-14 22:18:38,036 Predictions: [[0.03036876 0.01671003 0.46380037 0.21426493 0.03857819 0.0218993
+  0.1350336  0.05237778 0.01578932 0.01117777]]
+2024-06-14 22:18:38,036 Predicted class: bird with probability 0.4638003706932068
+2024-06-14 22:18:52,775 Predictions: [[0.02339477 0.01852967 0.5094636  0.19703536 0.03105021 0.01745618
+  0.12001861 0.05452405 0.01503527 0.0134922 ]]
+2024-06-14 22:18:52,775 Predicted class: bird with probability 0.5094636082649231
+2024-06-14 22:19:06,973 Predictions: [[0.02880968 0.01723683 0.33452022 0.2767243  0.04625051 0.03738089
+  0.18267225 0.04877666 0.01652459 0.01110415]]
+2024-06-14 22:19:06,973 Predicted class: bird with probability 0.33452022075653076
+2024-06-14 22:19:56,881 Predictions: [[0.02780952 0.01999299 0.44806185 0.22109601 0.03621579 0.01920641
+  0.14592583 0.05269011 0.01489957 0.01410183]]
+2024-06-14 22:19:56,881 Predicted class: bird with probability 0.44806185364723206
+2024-06-14 22:20:28,660 Predictions: [[0.02672949 0.01847336 0.5066705  0.19754557 0.03165356 0.01673817
+  0.1157369  0.05678847 0.0156984  0.01396564]]
+2024-06-14 22:20:28,660 Predicted class: bird with probability 0.5066704750061035
+2024-06-14 22:25:27,765 From C:\QA\GoIT\DataScience_Project\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2024-06-14 22:25:28,113 Model file not found at ResNet50_model.h5
