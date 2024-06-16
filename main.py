@@ -1,34 +1,37 @@
 from fastapi import FastAPI, File, UploadFile, Request
 from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.templating import Jinja2Templates
-from src.routers import auth, users
 import shutil
 import os
 import logging
 import tensorflow as tf
-from tensorflow.keras.preprocessing import image
+from tensorflow import keras
+from keras.preprocessing import image
 import numpy as np
+from PIL import Image  
+import cv2
 
 app = FastAPI()
-
-app.include_router(auth.router_auth, prefix="/api")
-app.include_router(users.router_users, prefix="/api")
 
 templates = Jinja2Templates(directory="src/templates")
 
 UPLOAD_FOLDER = "upload_images"
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+PROCESSED_FOLDER = "processed_images"
+
+# Створення папок, якщо вони не існують
+for folder in [UPLOAD_FOLDER, PROCESSED_FOLDER]:
+    if not os.path.exists(folder):
+        os.makedirs(folder)
 
 # Шлях до моделі
-model_path = "ResNet50_model.h5"
+model_path = "ResNet50_model.keras"
 
 # Налаштування логування
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Перевірка наявності файлу
-if not os.path.exists(model_path):
+# Перевірка наявності файлу моделі
+if not tf.io.gfile.exists(model_path):
     logger.error(f"Model file not found at {model_path}")
 else:
     model = tf.keras.models.load_model(model_path)
@@ -44,27 +47,47 @@ async def home(request: Request):
 @app.post("/upload/", response_class=HTMLResponse)
 async def upload_image(request: Request, file: UploadFile = File(...)):
     file_path = os.path.join(UPLOAD_FOLDER, file.filename)
+    processed_file_path = os.path.join(PROCESSED_FOLDER, file.filename)
+
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    # Обробка зображення
-    img = image.load_img(file_path, target_size=(32, 32))
-    img_array = image.img_to_array(img)
-    img_array = np.expand_dims(img_array, axis=0)
-    img_array = img_array / 255.0
+    # Зчитування та обробка зображення за допомогою OpenCV та numpy
+    file.file.seek(0)  # Повернення до початку файлу
+    img_bytes = await file.read()
+    nparr = np.frombuffer(img_bytes, np.uint8)
+    
+    try:
+        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        img = cv2.resize(img, (32, 32))
+        img = img.astype('float32') / 255.0
+        img = np.expand_dims(img, axis=0)
 
-    # Прогнозування
-    predictions = model.predict(img_array)
-    logger.info(f"Predictions: {predictions}")
-    predicted_class_index = np.argmax(predictions)
-    predicted_class = classes[predicted_class_index]
-    probability = predictions[0][predicted_class_index]
-    logger.info(f"Predicted class: {predicted_class} with probability {probability}")
+        # Прогнозування
+        predictions = model.predict(img)
+        logger.info(f"Predictions: {predictions}")
+        predicted_class_index = np.argmax(predictions)
+        predicted_class = classes[predicted_class_index]
+        probability = predictions[0][predicted_class_index]
+        logger.info(f"Predicted class: {predicted_class} with probability {probability}")
 
-    # Створення словника з ймовірностями для кожного класу
-    probabilities = {classes[i]: float(predictions[0][i]) for i in range(len(classes))}
+        # Збереження обробленого зображення
+        processed_img = Image.fromarray((img[0] * 255).astype(np.uint8))
+        processed_img.save(processed_file_path)
 
-    return templates.TemplateResponse("success.html", {"request": request, "filename": file.filename, "predicted_class": predicted_class, "probability": probability, "probabilities": probabilities})
+        # Створення словника з ймовірностями для кожного класу
+        probabilities = {classes[i]: float(predictions[0][i]) for i in range(len(classes))}
+
+        return templates.TemplateResponse("success.html", {
+            "request": request, 
+            "filename": file.filename, 
+            "predicted_class": predicted_class, 
+            "probability": probability, 
+            "probabilities": probabilities
+        })
+    except Exception as e:
+        logger.error(f"Error processing image: {e}")
+        return templates.TemplateResponse("error.html", {"request": request, "message": "Error processing image"})
 
 @app.get("/image/{filename}", response_class=HTMLResponse)
 async def show_image(request: Request, filename):
@@ -73,6 +96,10 @@ async def show_image(request: Request, filename):
 @app.get("/get_image/{filename}")
 async def get_image(filename):
     return FileResponse(os.path.join(UPLOAD_FOLDER, filename))
+
+@app.get("/get_processed_image/{filename}")
+async def get_processed_image(filename):
+    return FileResponse(os.path.join(PROCESSED_FOLDER, filename))
 
 @app.get("/all_images", response_class=HTMLResponse)
 async def show_all_images(request: Request):
