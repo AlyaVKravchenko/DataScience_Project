@@ -44,6 +44,14 @@
 <body>
     <h1>Upload Successful!</h1>
     <p>File {{ filename }} has been uploaded.</p>
+    <p>Predicted Class: {{ predicted_class }} with probability {{ (probability * 100) | round(2) }}%</p>
+
+    <h2>Class Probabilities:</h2>
+    <ul>
+        {% for class, prob in probabilities.items() %}
+            <li>{{ class }}: {{ (prob * 100) | round(2) }}%</li>
+        {% endfor %}
+    </ul>
     <a href="/">Go Back</a>
 </body>
 </html>
