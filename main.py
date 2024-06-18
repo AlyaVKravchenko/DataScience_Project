@@ -5,8 +5,6 @@ import shutil
 import os
 import logging
 import tensorflow as tf
-from tensorflow import keras
-from keras.preprocessing import image
 import numpy as np
 from PIL import Image  
 import cv2
@@ -24,7 +22,7 @@ for folder in [UPLOAD_FOLDER, PROCESSED_FOLDER]:
         os.makedirs(folder)
 
 # Шлях до моделі
-model_path = "ResNet50_model.keras"
+model_path = "CNN_50_epochs.h5"
 
 # Налаштування логування
 logging.basicConfig(level=logging.INFO)
